@@ -329,7 +329,7 @@ table Calendar
 				let 
 				
 				    P_Today =  DateTime.LocalNow(),
-				    P_StartDate = #date(Date.Year(List.Min(#"RAW-SalesDateAdjustedAndSalesRandomized"[Order Date])), 1, 1),
+				    P_StartDate = Date.AddYears(#date(Date.Year(List.Min(#"RAW-SalesDateAdjustedAndSalesRandomized"[Order Date])), 1, 1),-2),
 				    P_EndDate  = #date(Date.Year(List.Max(#"RAW-SalesDateAdjustedAndSalesRandomized"[Order Date])), 12, 31),  
 				    P_FirstDayOfWeek = 1,
 				    P_IsCarnivalHoliday = true,
